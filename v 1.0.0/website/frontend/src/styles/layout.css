@@ -1,0 +1,228 @@
+/* Layout */
+@media (min-width: 0px) {
+  .container {
+    width: min(90vw, 1200px) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+}
+
+section {
+  @apply my-0 py-[15vh];
+  overflow: hidden;
+}
+
+/* Section Title */
+.section-title {
+  margin-inline: auto;
+  align-self: center;
+  margin-bottom: 5rem;
+}
+
+.section-title h1 {
+  margin-bottom: 32px;
+  margin-inline: auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.section-title > p {
+  max-width: 52ch;
+  text-align: center;
+  margin-inline: auto;
+}
+
+/* Icon Box */
+.icon-box {
+  padding: 1rem;
+  aspect-ratio: 1 / 1;
+  opacity: 0.95;
+  transition: opacity 300ms;
+  @apply bg-darkerBlue flex justify-center items-center text-white rounded-circle;
+}
+
+.icon-box:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.icon-close {
+  color: #000;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-sm {
+  width: 4rem;
+  font-size: 2em;
+}
+
+.icon-lg {
+  width: 5rem;
+  font-size: 2.5em;
+}
+
+/* Box */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply rounded-xl hover:cursor-pointer;
+}
+
+.box video {
+  @apply rounded-xl;
+}
+
+.note-box {
+  position: relative;
+  @apply bg-green rounded-lg p-8 overflow-hidden;
+}
+
+.note-box > *:not(.icon) {
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.note-box > a {
+  @apply text-lg font-bold hover:underline;
+}
+
+.note-box > * + * {
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.course-card {
+  border-radius: 14px;
+  padding: 22px;
+  padding-bottom: 32px;
+  min-height: 100%;
+  @apply flex flex-col gap-8 bg-gradient-to-b to-green from-darkerBlue;
+}
+
+.course-card.new {
+  overflow: hidden;
+  position: relative;
+}
+
+.course-card.new::before {
+  content: "New!!";
+  position: absolute;
+  top: 30px;
+  right: -54px;
+  rotate: 45deg;
+  width: max-content;
+  padding: 0.25rem 5rem;
+  text-align: center;
+  @apply bg-lightRed font-extrabold text-lg;
+}
+
+.course-card__desc {
+  max-width: 45ch;
+}
+
+.course-card__image {
+  aspect-ratio: 4 / 3;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @apply rounded-xl;
+}
+
+.course-card__info {
+  @apply flex flex-col gap-4;
+}
+
+.course-card__info .tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.course-card__title {
+  color: white;
+}
+
+/* Tabs */
+.tabs-list {
+  display: flex;
+  justify-content: end;
+  flex-direction: row-reverse;
+  gap: 2.5rem;
+  border-bottom: 1px solid #000;
+  overflow-x: scroll;
+}
+
+.tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  font-size: 1.75rem;
+  cursor: pointer;
+  @apply font-bold text-lightRed px-4;
+}
+
+.tab.active {
+  @apply border-b-4 border-lightRed pb-4;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.social-links .social-link {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  filter: grayscale(0.5);
+  transition: filter 300ms, translate 300ms;
+  translate: -5px;
+  @apply shadow-lg;
+}
+
+.social-links .social-link:hover {
+  filter: grayscale(0);
+  translate: 0;
+}
+
+.social-links .social-link img {
+  width: 3.5rem;
+}
+
+/* Scroll To Top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  z-index: 99;
+  @apply bg-lightRed shadow-lg text-white2 font-black animate-bounce;
+  filter: grayscale(0.5);
+  transition: filter 300ms;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  filter: grayscale(0);
+  translate: 0;
+}

@@ -1,0 +1,32 @@
+.tag {
+  padding: 4px 10px;
+  color: white;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  @apply font-extrabold text-sm rounded-[54px] bg-lightRed;
+}
+
+.tag-dark-red {
+  @apply bg-darkRed;
+}
+
+.tag-green {
+  @apply bg-green;
+}
+
+.tag-blue {
+  @apply bg-blue;
+}
+
+.tag-dark-blue {
+  @apply bg-darkBlue;
+}
+
+.tag-darker-blue {
+  @apply bg-darkerBlue;
+}
+
+.tag-orange {
+  @apply bg-call;
+}

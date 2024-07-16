@@ -1,0 +1,10 @@
+Django
+djangorestframework
+djangorestframework-simplejwt
+django-jazzmin
+django-cors-headers
+gunicorn
+
+requests
+
+python-dotenv

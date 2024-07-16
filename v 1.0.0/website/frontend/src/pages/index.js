@@ -1,0 +1,13 @@
+export { default as Books } from "./Books";
+export { default as Contact } from "./Contact";
+export { default as Course } from "./Course";
+export { default as Courses } from "./Courses";
+export { default as Exam } from "./Exam";
+export { default as Exercises } from "./Exercises";
+export { default as Home } from "./Home";
+export { default as NotFound } from "./NotFound";
+export { default as Results } from "./Results";
+export { default as SignIn } from "./SignIn";
+export { default as SignUp } from "./SignUp";
+export { default as User } from "./User";
+export { default as Video } from "./Video";

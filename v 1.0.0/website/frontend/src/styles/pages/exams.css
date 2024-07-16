@@ -1,0 +1,117 @@
+.exam {
+  @apply grid sm:grid-cols-5 min-h-screen my-0 py-[150px] gap-y-8 sm:gap-8 content-start sm:content-normal;
+}
+
+.questions {
+  grid-row: 1 / span 2;
+  @apply bg-[#eee] p-6 rounded-xl;
+}
+
+.questions-list {
+  grid-column: 1 / -1;
+  @apply flex sm:flex-col gap-4 overflow-x-scroll;
+}
+
+.questions-list::-webkit-scrollbar {
+  display: none;
+}
+
+.questions-list li {
+  @apply rounded-sm p-3 text-center shrink-0;
+}
+
+.questions-list li.active,
+.questions-list li:hover {
+  @apply bg-lightGreen text-white;
+}
+
+.questions-list li h3 {
+  @apply text-2xl font-bold hover:underline hover:cursor-pointer;
+}
+
+/* Question */
+.question {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  gap: 2.5rem;
+  @apply bg-[#eee] px-8 py-12 rounded-xl col-span-4;
+}
+
+.questions::-webkit-scrollbar {
+  display: none;
+}
+
+.question .question-title {
+  @apply flex items-center justify-between;
+}
+
+.question .question-title div > * {
+  transition: transform 300ms;
+  @apply text-black hover:text-call hover:scale-110;
+}
+
+.question .timer {
+  @apply text-4xl text-lightRed flex gap-4 font-bold;
+}
+
+.question h2 {
+  @apply text-5xl font-extrabold;
+}
+
+.question p {
+  @apply text-3xl font-[400];
+}
+
+.question ul {
+  display: flex; /* No flex-direction needed */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question ul li {
+  text-overflow: ellipsis;
+  @apply text-2xl font-[400] hover:underline hover:cursor-pointer flex items-center gap-4 p-6 rounded-xl;
+}
+
+.question ul li.active,
+.question ul li:hover {
+  @apply bg-white2;
+}
+
+.question ul li.correct {
+  @apply bg-lightGreen;
+}
+
+.question ul li.wrong {
+  @apply bg-lightRed;
+}
+
+.question ul li input[type="radio"] {
+  width: 16px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+.question ul li p {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Options */
+.options {
+  grid-column: 2 / -1;
+  max-height: 95px;
+  @apply bg-[#eee] p-6 py-10 rounded-xl flex justify-between items-center;
+}
+
+.options button#next,
+.options button#prev {
+  @apply text-3xl text-lightRed font-extrabold hover:underline;
+}
+
+#next {
+}
+
+#prev {
+}

@@ -1,0 +1,125 @@
+/* Courses */
+.courses-grid {
+  @apply items-start grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2vw] gap-y-16;
+}
+
+.courses-grid .search-bar + div {
+  @apply grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3;
+}
+
+@media (min-width: 0px) {
+  .courses-grid .search-bar + div {
+    padding-inline: 0vw;
+  }
+}
+
+@media (min-width: 180px) {
+  .courses-grid .search-bar + div {
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 380px) {
+  .courses-grid .search-bar + div {
+    padding-inline: 8vw;
+  }
+}
+
+@media (min-width: 480px) {
+  .courses-grid .search-bar + div {
+    padding-inline: 12vw;
+  }
+}
+
+@media (min-width: 540px) {
+  .courses-grid .search-bar + div {
+    padding-inline: 15vw;
+  }
+}
+
+@media (min-width: 640px) {
+  .courses-grid .search-bar + div {
+    padding-inline: 0vw;
+  }
+}
+
+.course-card:hover {
+  transition: 300ms scale;
+  scale: 1.02;
+}
+
+.course-card:hover button {
+  @apply animate-bounce;
+}
+
+.course-card:hover button.btn-disabled {
+  animation: none;
+}
+
+.search-bar {
+  position: relative;
+  grid-column: 1 / -1;
+}
+
+.search-bar .input-group input {
+  background-color: transparent;
+  @apply bg-darkBlue text-white text-xl rounded-[50px];
+}
+
+.search-bar .input-group > label {
+  right: 15px;
+  @apply text-white bg-darkBlue;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  z-index: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+  @apply text-white2;
+}
+
+.filters {
+  display: grid;
+  grid-row-start: 2;
+  grid-column: 1 / -1;
+  gap: 2rem;
+}
+
+@screen lg {
+  .filters {
+    grid-column-start: 4;
+  }
+}
+
+.filters h4 {
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.filter-list {
+  display: grid;
+  row-gap: 1rem;
+  margin-block: 2rem;
+}
+
+.filter-list > li {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+.filter-list > li:only-of-type {
+  flex-direction: column;
+}
+
+.filter-list > li > input {
+  width: 20px;
+}
+
+.filter-list > li > span {
+  font-size: 18px;
+}

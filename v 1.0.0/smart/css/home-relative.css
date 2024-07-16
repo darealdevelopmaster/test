@@ -1,0 +1,68 @@
+@media (max-width: 768px) {
+    .header {
+        padding: 5px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-left: 5px;
+    }
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+    .nav-button {
+        font-size: 0.9em;
+    }
+
+    .welcome-section {
+        padding: 20px;
+    }
+
+    .welcome-section h2 {
+        font-size: 2em;
+    }
+
+    .welcome-section p {
+        font-size: 1em;
+    }
+
+    .user-profile {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .user-profile h3 {
+        font-size: 1.5em;
+    }
+
+    .profile-info p {
+        font-size: 1em;
+    }
+    #settings-button{
+        font-size: 1.5em;
+    }
+
+    #home-button {
+        position: relative;
+        right: 35px;
+        top: 2px;
+    }
+
+    #courses-button {
+        position: relative;
+        right: 35px;
+        top: 2px;
+    }
+
+    #settings-button {
+        position: relative;
+        top: 2px;
+        right: 25px;
+    }
+
+    #menu {
+        font-size: 1.2em;
+    }
+}

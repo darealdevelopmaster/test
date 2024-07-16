@@ -1,0 +1,181 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 25%;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar li:hover {
+    background: #34495e;
+}
+
+/* Main calculator styles */
+.calculator {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+}
+
+.calculator h2 {
+    margin-top: 0;
+}
+
+.select-group {
+    margin-bottom: 20px;
+}
+
+.select-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.select-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#calculate {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#calculate:hover {
+    background: #2980b9;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-text {
+    margin-bottom: 10px;
+}
+
+/* Draggable calculator styles */
+.draggable-calculator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    user-select: none;
+}
+
+.calc-header {
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    cursor: move;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+}
+
+.calc-display {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.calc-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calc-btn {
+    width: 25%;
+    padding: 15px;
+    border: none;
+    background: #f4f4f4;
+    cursor: pointer;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.calc-btn:hover {
+    background: #ddd;
+}

@@ -1,0 +1,151 @@
+:root {
+    --main-color: #2c3e50;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header {
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.logo-and-nav {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 800;
+    user-select: none;
+    color: #151515;
+    padding-right: 30px;
+    position: relative;
+    margin-left: 110px;
+    margin-right: 20px;
+}
+
+.nav-buttons {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 23px 10px;
+    color: #333;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+#courses-button:hover {
+    position: relative;
+    color: #333;
+    border-bottom: 7px solid #e0e0e0;
+}
+
+#home-button {
+    border-bottom: 4px solid #000000;
+}
+
+.settings {
+    font-size: 1.7em;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.settings:hover {
+    background-color: #e0e0e0;
+}
+
+.small-gray-div {
+    height: 3px;
+    background-color: rgba(246, 246, 247, 255);
+}
+
+main {
+    padding: 20px;
+    padding-top: 80px; /* Added padding to prevent content from hiding behind the fixed header */
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.user-profile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-profile h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #333;
+}
+
+.profile-info p strong {
+    color: var(--main-color);
+}
