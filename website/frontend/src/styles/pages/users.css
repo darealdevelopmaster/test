@@ -1,0 +1,64 @@
+.user-profile {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4.75rem;
+  gap: 3rem;
+}
+
+@screen xs {
+  .user-profile {
+    flex-direction: row;
+  }
+}
+
+.user-profile-img {
+  flex: 0.3;
+  background-color: #808080;
+  aspect-ratio: 3 / 4;
+  border-radius: 1em;
+  height: 350px;
+}
+
+@screen xs {
+  .user-profile-img {
+    height: auto;
+  }
+}
+
+.user-profile-info {
+  flex: 0.7;
+  display: flex;
+}
+
+.user-profile-info-list {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.user-profile-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-profile-info-item:last-child {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.user-profile-info-item:last-child span {
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.user-profile-info-label {
+  @apply text-2xl font-bold;
+}
+
+.user-profile-info-value {
+  @apply text-xl;
+}

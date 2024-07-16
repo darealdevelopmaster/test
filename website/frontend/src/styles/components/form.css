@@ -1,0 +1,137 @@
+.form {
+  max-width: 700px;
+  margin-inline: auto;
+  @apply bg-lightGreen px-16 py-24 rounded-2xl;
+}
+
+.form-tabs {
+  display: flex;
+  margin-inline: auto !important;
+  justify-content: center;
+  max-width: 700px;
+  gap: 1rem;
+}
+
+.form-tabs li {
+  flex: 0.45;
+  min-height: 5rem;
+  cursor: pointer;
+  @apply transition-colors rounded-tl-2xl rounded-tr-2xl text-center text-2xl flex items-center justify-center font-bold uppercase;
+}
+
+.form-tabs li:hover {
+  @apply bg-green;
+}
+
+.form-tabs li.active {
+  @apply bg-lightGreen;
+}
+
+.form-tabs li.active:hover {
+  @apply bg-lightGreen;
+}
+
+.form-title {
+  @apply mb-16 text-center;
+}
+
+.form-title h2 {
+  @apply mb-10 text-5xl;
+}
+
+.form-title p {
+  @apply max-w-[35ch] leading-10 mx-auto text-2xl font-[400];
+}
+
+.input-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.input-group {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  flex: 1;
+  font-size: 1.25rem;
+}
+
+.input-group > label {
+  --duration: 150ms;
+  position: absolute;
+  top: 50%;
+  right: 1vw;
+  transform: translateY(-50%);
+  font-size: 1em;
+  line-height: 18px;
+  padding: 3px;
+  color: #000;
+  text-align: right;
+  transition:
+    top var(--duration),
+    color var(--duration),
+    font-size var(--duration);
+  @apply bg-white2 rounded-sm;
+}
+
+.input-group > label.active {
+  top: -1px;
+  font-size: 0.7em;
+  color: #000;
+  background: #fff;
+}
+
+.input-group > input,
+.input-group > textarea,
+.input-group > select {
+  padding: 1.4rem 1rem;
+  text-align: right;
+  @apply rounded-lg flex-1 bg-white2 text-lg border-none;
+}
+
+.input-group > textarea {
+  resize: none;
+  height: 320px;
+  font-size: 1.125em;
+  line-height: 2rem;
+}
+
+.input-group > textarea + label {
+  width: fit-content;
+  height: fit-content;
+  top: auto;
+  bottom: 1rem;
+  left: 1rem;
+  transform: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  background: transparent;
+  color: #222;
+  text-align: right;
+}
+
+.input-group > select {
+  padding: 1.25rem 1rem;
+  appearance: none;
+  @apply rounded-lg flex-1 bg-white2 text-[1.25rem] border-none;
+}
+
+.input-group > .select-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 1% 12px;
+  border-right: 1px solid;
+  transform: translateY(-50%);
+}
+
+.input-group > .select-icon > *.active {
+  transform: rotate(180deg);
+}
+
+.input-group > input:focus,
+.input-group > textarea:focus,
+.input-group > select:focus {
+  @apply bg-[#fff] outline-none;
+}

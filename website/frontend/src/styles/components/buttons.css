@@ -1,0 +1,43 @@
+.btn {
+  padding: 12px 64px;
+  border: none;
+  border-radius: 54px;
+  transition: scale 150ms;
+  line-height: auto;
+  @apply text-xl font-bold;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  scale: 1.05;
+}
+
+.btn-primary {
+  @apply text-white bg-darkerBlue;
+}
+
+.btn-outline {
+  border: 1px solid transparent;
+  background-color: white;
+  @apply text-darkerBlue border-darkerBlue;
+}
+
+.btn-orange {
+  @apply text-white bg-call;
+}
+
+.btn-white {
+  @apply text-darkerBlue bg-white2;
+}
+
+.btn-sm {
+  padding: .625em 3.375em;
+  @apply text-lg;
+}
+
+/* Extra */
+.btn-disabled {
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+}

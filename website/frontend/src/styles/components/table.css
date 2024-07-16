@@ -1,0 +1,70 @@
+.table-wrapper {
+  overflow-x: scroll;
+}
+
+/* .table-wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 18px;
+  margin: 20px 0;
+  width: 100%;
+  min-width: 560px;
+}
+
+th,
+td {
+  width: calc(100% / 7); /* Equal width for each column */
+  border: none; /* Remove all borders */
+  padding: 18px 16px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex: 1;
+  text-align: right;
+  @apply text-xl lg:text-lg font-arabic;
+}
+
+th:first-child,
+td:first-child {
+  flex: 0.4;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  flex: 1.4;
+}
+
+th {
+  @apply text-white bg-darkerBlue;
+}
+
+tr {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Bottom border for table rows */
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+th:first-child,
+td:first-child {
+  border-left: none; /* Remove left border for first column */
+}
+
+th:last-child,
+td:last-child {
+  border-right: none; /* Remove right border for last column */
+}
+
+table input[type="number"] {
+  padding: 10px;
+}

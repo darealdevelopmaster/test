@@ -1,0 +1,253 @@
+/* Title */
+.title {
+  position: relative;
+  align-self: center;
+  z-index: 3;
+}
+
+.title h1 {
+  text-align: center;
+  margin-inline: auto;
+  letter-spacing: -4px;
+  text-shadow: 0px 1px 10px #000;
+  @apply text-white text-[4rem];
+  line-height: 1.4;
+}
+
+@screen sm {
+  .title h1 {
+    @apply text-black;
+    text-shadow: none;
+  }
+}
+
+@screen lg {
+  .title h1 {
+    letter-spacing: -4px;
+    line-height: 1.5;
+  }
+}
+
+.title h1 span {
+  display: block;
+  -webkit-text-stroke: 1px #000;
+  font-size: 1.2em;
+  @apply text-green;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* Header */
+header {
+  min-height: 100vh;
+  @apply overflow-hidden relative grid;
+}
+
+header * {
+  user-select: none;
+}
+
+header .content {
+  @apply min-h-full grid grid-cols-1 md:grid-cols-2;
+}
+
+header .content > .title {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  margin-top: 18rem;
+  z-index: 3;
+}
+
+header .content > .profile-img {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  z-index: 2;
+}
+
+@screen sm {
+  header .content > .title {
+    grid-column: 2 / span 1;
+    margin-top: 0;
+  }
+}
+
+/* Images */
+.profile-img {
+  align-self: end;
+  justify-self: center;
+  width: 600px;
+  aspect-ratio: 0.9 / 1;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.atom-figure {
+  @apply absolute top-0 right-0 opacity-20;
+  width: 240px;
+  /* Apply Animation */
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+}
+
+@screen xs {
+  .atom-figure {
+    width: 280px;
+  }
+}
+@screen sm {
+  .atom-figure {
+    width: 340px;
+  }
+}
+@screen md {
+  .atom-figure {
+    width: 380px;
+  }
+}
+@screen lg {
+  .atom-figure {
+    width: 460px;
+  }
+}
+
+.lamp-figure {
+  position: fixed;
+  top: 55px;
+  left: 50px;
+  width: 16vw;
+  rotate: 180deg;
+  z-index: 99;
+}
+
+@screen xs {
+  .lamp-figure {
+    top: 30px;
+  }
+}
+
+/* Stats Section */
+.stats {
+  @apply py-28;
+}
+
+.stats > div > div > div > div:first-child {
+  -webkit-text-stroke: 3px #000;
+}
+
+/* Categories */
+
+.category-card {
+  scale: 1;
+  transition: scale 150ms, background-color 150ms;
+  @apply rounded-xl bg-darkBlue hover:bg-darkerBlue overflow-hidden p-6 pb-8;
+}
+
+.category-card:hover {
+  scale: 1.02;
+  @apply cursor-pointer;
+}
+
+.category-card:hover h3 {
+  @apply underline;
+}
+
+.category-card__image {
+  @apply rounded-xl bg-[#fff] overflow-hidden;
+}
+
+.category-card__image img {
+  aspect-ratio: 3 / 4;
+  @apply w-full max-h-[530px];
+}
+
+.category-card h3 {
+  @apply text-center text-white text-lg mt-8;
+}
+
+.category-card h3:hover {
+  @apply underline;
+}
+
+/* Testimonials */
+.testimonials {
+  @apply relative flex flex-col items-center gap-x-8 gap-y-24;
+}
+
+@screen md {
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 300px);
+  }
+}
+
+.testimonials .section-title {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+@screen md {
+  .testimonials .section-title {
+    grid-row: 2;
+    grid-column: 3 / span 2;
+  }
+}
+
+.testimonial-card {
+  width: 80%;
+  min-height: 300px;
+  aspect-ratio: 16 / 9;
+  @apply bg-green flex flex-col items-center justify-center rounded-2xl p-6 relative;
+}
+
+@screen md {
+  .testimonial-card:nth-child(2) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .testimonial-card:nth-child(3) {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+  }
+
+  .testimonial-card:nth-child(4) {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+  }
+}
+
+.testimonial-card__image {
+  width: 110px;
+  aspect-ratio: 1 / 1;
+  top: -55px;
+  right: -55px;
+  @apply border-white2 border-[10px] border-solid rounded-circle grid place-content-center bg-[#fff] overflow-hidden absolute;
+}
+
+.testimonial-card__quote p {
+  max-width: 36ch;
+  font-style: italic;
+  @apply text-center text-2xl font-light;
+}
+
+/* Keyframes */
+/* Infinite slow rotation */
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

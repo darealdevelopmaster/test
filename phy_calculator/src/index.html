@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <!-- MathJax script -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <h2 style="font-family: 'Playwrite NG Modern', sans-serif;">Physics Calculator</h2>
+            <input type="text" id="search" placeholder="Search for a rule...">
+            <ul id="rules-list">
+                <!-- Rules will be dynamically inserted here -->
+            </ul>
+        </div>
+        <div id="calculator" class="calculator">
+            <h2 id="selected-rule">Select a rule</h2>
+            <div class="select-group">
+                <label for="solve-for">Solve for:</label>
+                <select id="solve-for">
+                    <!-- Options will be dynamically inserted here -->
+                </select>
+            </div>
+            <div id="inputs">
+                <!-- Inputs will be dynamically inserted here -->
+            </div>
+            <button id="calculate">Calculate</button>
+            <div id="result">
+                <div class="result-text"></div>
+                <div id="result-unit">
+                    <label for="result-unit-select">Result Unit:</label>
+                    <select id="result-unit-select">
+                        <!-- Options will be dynamically inserted here -->
+                    </select>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
